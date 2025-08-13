@@ -1,29 +1,201 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-</head>  
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+      rel="stylesheet"
+    />
+</head>
 <body>
-    <article id="main-article" class="row article" style="background-color: black;">
-        <header class="column">
-            <div class="header left side"></div>
-                <div class="logo">
-                    <img src="i class" alt="Logo" />
-                <div class="header right side"></div>
-            <div></div>
-            <h1>Welcome to My Web Page</h1>
-        </header>
-    </article>
-    <nav>
-    <main>
-        <p>This is a simple web page example.</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 My Web Page</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html> 
+    <header>
+<!-- MDB -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-light navbar-light ">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+
+    <!-- Navbar brand with Instagram icon and text -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="fab fa-instagram fa-lg me-2"></i>
+      <span>Instagram</span>
+    </a>
+
+    <!-- Toggle button -->
+    <!-- Right side buttons -->
+    <div class="d-flex align-items-center ms-auto">
+      <button class="btn btn-success me-2">Create a Post</button>
+      <!-- Gear icon dropdown -->
+      <div class="dropdown">
+  <button class="btn custom-darkgrey dropdown-toggle d-flex align-items-center" type="button" id="settingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-cog"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accessibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+        </ul>
+      </div>
+   
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            Settings
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<!-- Feed Layout Toggle -->
+<div class="container my-3">
+  <div class="d-flex justify-content-center">
+    <button id="gridViewBtn" class="btn btn-outline-primary me-2" title="Grid View">
+  <i class="fas fa-duotone fa-border-all"></i>
+    </button>
+    <button id="columnViewBtn" class="btn btn-outline-secondary" title="Column View">
+<i class="fa-duotone fa-solid fa-square"></i>    </button>
+  </div>
+</div>
+
+<!-- News Feed -->
+<style>
+  .custom-darkgrey {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+  }
+  .custom-darkgrey:hover, .custom-darkgrey:focus {
+    background-color: #23272b;
+    color: #fff;
+  }
+</style>
+<div id="newsFeed">
+  <div class="feed-item card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <h5 class="card-title mb-0">Exploring the Universe</h5>
+      <small class="text-muted">Aug 13, 2025</small>
+    </div>
+  </div>
+    <div class="feed-item card mb-4">
+  <img src="https://picsum.photos/id/1015/600/400" class="card-img-top" alt="Man looking at lake">
+  
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h6 class="card-title mb-0">A planet at a time</h6>
+    <small class="text-muted">Aug 13, 2025</small>
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">A quiet moment at the lake</h5>
+    <p class="card-text">
+      There's nothing quite like a peaceful morning by the water. The mountains in the distance were just incredible.
+    </p>
+  </div>
+
+  <div class="card-footer">
+    <small class="text-muted">Posted 3 mins ago</small>
+  </div>
+</div>
+
+
+
+  <div class="feed-item card mb-4">
+    <img src="https://picsum.photos/id/1016/600/400" class="card-img-top" alt="Woman in a wheat field">
+    <div class="card-body">
+      <h5 class="card-title">Golden Hour</h5>
+      <p class="card-text">
+        Chasing the sun through the fields. This was one of the most beautiful sunsets I've ever seen.
+      </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Posted 2 hours ago</small>
+    </div>
+  </div>
+
+  <div class="feed-item card mb-4">
+    <img src="https://picsum.photos/id/1025/600/400" class="card-img-top" alt="Pug wearing a jacket">
+    <div class="card-body">
+      <h5 class="card-title">Ready for Adventure</h5>
+      <p class="card-text">
+        Someone is very proud of his new jacket and is ready for our weekend trip.
+      </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Posted yesterday</small>
+    </div>
+  </div>
+</div>
+
+<style>
+  #newsFeed.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  #newsFeed.grid .feed-item {
+    margin-bottom: 0;
+  }
+  #newsFeed.column {
+    display: block;
+  }
+</style>
+
+<script>
+  const gridBtn = document.getElementById('gridViewBtn');
+  const columnBtn = document.getElementById('columnViewBtn');
+  const feed = document.getElementById('newsFeed');
+  gridBtn.addEventListener('click', () => {
+    feed.classList.add('grid');
+    feed.classList.remove('column');
+  });
+  columnBtn.addEventListener('click', () => {
+    feed.classList.add('column');
+    feed.classList.remove('grid');
+  });
+  // Default to column view
+  feed.classList.add('column');
+</script>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.1.0/mdb.umd.min.js"
+></script>
+</html>
