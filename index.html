@@ -19,7 +19,6 @@
     />
 </head>
 <body>
-    <header>
 <!-- MDB -->
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-light navbar-light ">
@@ -56,10 +55,6 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-            Settings
           </a>
           <!-- Dropdown menu -->
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -87,17 +82,87 @@
 <!-- Navbar -->
 
 <!-- Feed Layout Toggle -->
-<div class="container my-3">
-  <div class="d-flex justify-content-center">
-    <button id="gridViewBtn" class="btn btn-outline-primary me-2" title="Grid View">
-  <i class="fas fa-duotone fa-border-all"></i>
+<ul class="nav nav-pills justify-content-center my-3" id="viewToggle" role="tablist">
+  <!-- Grid View -->
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="grid-tab" data-bs-toggle="pill" data-bs-target="#grid" type="button" role="tab" aria-controls="grid" aria-selected="true" title="Grid View">
+      <i class="bi bi-grid"></i>
     </button>
-    <button id="columnViewBtn" class="btn btn-outline-secondary" title="Column View">
-<i class="fa-duotone fa-solid fa-square"></i>    </button>
-  </div>
-</div>
+  </li>
+ <!-- Feed View -->
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="feed-tab" data-bs-toggle="pill" data-bs-target="#feed" type="button" role="tab" aria-controls="feed" aria-selected="false" title="Feed View">
+      <i class="bi bi-view-stacked"></i>
+    </button>
+  </li>
+</ul>
 
-<!-- News Feed -->
+<!-- Tab Content -->
+<div class="tab-content" id="viewContent">
+  <!-- Grid View Tab -->
+  <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+    <div class="container-fluid my-4">
+      <div class="row row-cols-3 row-cols-md-4 g-3">
+        
+        <div class="col">
+          <div class="ratio ratio-1x1 bg-light overflow-hidden d-flex align-items-center justify-content-center">
+            <img src="https://t3.ftcdn.net/jpg/01/00/85/20/360_F_100852023_BDsIGVhOLDK8jdHDpejYhi2sDqdRyKvz.jpg"
+                 class="img-fluid object-fit-cover" style="max-width: 100%; max-height: 100%;" />
+          </div>
+        </div>
+        
+        <div class="col"><div class="ratio ratio-1x1 bg-light">
+          <img src="https://t3.ftcdn.net/jpg/01/00/85/20/360_F_100852023_BDsIGVhOLDK8jdHDpejYhi2sDqdRyKvz.jpg" 
+          class="img-fluid object-fit-cover" style="max-width: 100%; max-height: 100%;"  />
+        </div>
+        </div>
+        <div class="col">
+          <div class="ratio ratio-1x1 bg-light">
+          <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="img-fluid" />
+        </div>
+        </div>
+        <div class="col">
+          <div class="ratio ratio-1x1 bg-light overflow-hidden d-flex align-items-center justify-content-center">
+            
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Venus_globe.jpg/250px-Venus_globe.jpg" 
+           class="img-fluid object-fit-cover" style="max-width: 100%; max-height: 100%;" />
+        </div>
+        </div>
+          <div class="col">
+          <div class="ratio ratio-1x1 bg-light">
+            <img src="https://c02.purpledshub.com/uploads/sites/41/2024/04/jupiter.jpg?w=1200" 
+             class="img-fluid object-fit-cover" style="max-width: 100%; max-height: 100%;" />
+        </div>
+        </div>
+          <div class="col">
+          <div class="ratio ratio-1x1 bg-light">
+            <img src="https://science.nasa.gov/wp-content/uploads/2023/04/272_MarsInSight_poster-jpg.webp" 
+             class="img-fluid object-fit-cover" style="max-width: 100%; max-height: 100%;" />
+        </div>
+        </div>
+          <div class="col">
+          <div class="ratio ratio-1x1 bg-light">
+            <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:502,cw:1290,ch:1290,q:80,w:1290/RifjtkFLBEFgzkZqWEh69P.jpg" 
+             class="img-fluid object-fit-cover" style="max-width: 100%; max-height: 100%;" />
+        </div>
+        </div>
+          <div class="col">
+          <div class="ratio ratio-1x1 bg-light">
+            <img src="https://c02.purpledshub.com/uploads/sites/48/2019/10/Hubble_Uranus-4b72360.jpg" 
+             class="img-fluid object-fit-cover" style="max-width: 100%; max-height: 100%;" />
+        </div>
+        </div>
+          <div class="col">
+          <div class="ratio ratio-1x1 bg-light">
+            <img src="https://images-assets.nasa.gov/image/PIA00405/PIA00405~large.jpg" 
+             class="img-fluid object-fit-cover" style="max-width: 100%; max-height: 100%;" />
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<!-- Feed View -->
 <style>
   .custom-darkgrey {
     background-color: #343a40;
@@ -109,35 +174,56 @@
     color: #fff;
   }
 </style>
-<div id="newsFeed">
-  <div class="feed-item card mb-4">
-    <div class="card-header d-flex justify-content-between align-items-center">
-      <h5 class="card-title mb-0">Exploring the Universe</h5>
+<div class="tab-pane fade" id="feed" role="tabpanel" aria-labelledby="feed-tab">
+  <div class="container my-4">
+    <div class="card mb-4 shadow-sm">
+      <div class="d-flex justify-content-between align-items-center p-3">
+        <h5 class="card-title">A Journey Through Space</h5>  
+        <small class="text-muted">Aug 14, 2025</small>
+        </div>
+        <img src="https://t3.ftcdn.net/jpg/01/00/85/20/360_F_100852023_BDsIGVhOLDK8jdHDpejYhi2sDqdRyKvz.jpg">
+        <div class="card-body">
+      <p class="card-text">
+        Neptune, the farthest planet from the Sun, is a world of mystery and beauty. This image captures its deep blue hues and swirling clouds.
+      </p>
+      <p class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </p>
+    </div>
+ <div class="card-header d-flex justify-content-between align-items-center">
+      <h5 class="card-title">Exploring the Universe</h5>
       <small class="text-muted">Aug 13, 2025</small>
+      </div>
+    <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/internal_resources/730/Saturn_and_its_rings.jpeg?w=3000&h=2143&fit=clip&crop=faces%2Cfocalpoint">
+  <div class="card-body">
+      <p class="card-text">
+        Saturn is the planet with rings which symbolizes structure and beauty in the cosmos. This image captures the intricate details of its rings and moons.
+      </p>
+      <p class="card-text">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </p>
     </div>
   </div>
-    <div class="feed-item card mb-4">
-  <img src="https://picsum.photos/id/1015/600/400" class="card-img-top" alt="Man looking at lake">
-  
-  <div class="card-header d-flex justify-content-between align-items-center">
-    <h6 class="card-title mb-0">A planet at a time</h6>
-    <small class="text-muted">Aug 13, 2025</small>
-  </div>
 
-  <div class="card-body">
-    <h5 class="card-title">A quiet moment at the lake</h5>
-    <p class="card-text">
-      There's nothing quite like a peaceful morning by the water. The mountains in the distance were just incredible.
-    </p>
+<div class="container my-4">
+  <!-- Card Start -->
+  <div class="card mb-4 shadow-sm">
+    <div class="d-flex justify-content-between align-items-center p-3">
+      <h5 class="mb-0">One Planet at a time</h5>
+      <small class="text-muted">Aug 13, 2025</small>
+    </div>
+    <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="card-img-top" alt="Post image">
+    <div class="card-body">
+      <p class="card-text">
+        This is a wider card with supporting text below as a natural lead-in to additional content.
+      </p>
+      <p class="card-text">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </p>
+    </div>
   </div>
-
-  <div class="card-footer">
-    <small class="text-muted">Posted 3 mins ago</small>
-  </div>
+  <!-- Card End -->
 </div>
-
-
-
   <div class="feed-item card mb-4">
     <img src="https://picsum.photos/id/1016/600/400" class="card-img-top" alt="Woman in a wheat field">
     <div class="card-body">
@@ -164,7 +250,6 @@
     </div>
   </div>
 </div>
-
 <style>
   #newsFeed.grid {
     display: grid;
@@ -178,24 +263,11 @@
     display: block;
   }
 </style>
-
-<script>
-  const gridBtn = document.getElementById('gridViewBtn');
-  const columnBtn = document.getElementById('columnViewBtn');
-  const feed = document.getElementById('newsFeed');
-  gridBtn.addEventListener('click', () => {
-    feed.classList.add('grid');
-    feed.classList.remove('column');
-  });
-  columnBtn.addEventListener('click', () => {
-    feed.classList.add('column');
-    feed.classList.remove('grid');
-  });
-  // Default to column view
-  feed.classList.add('column');
-</script>
 <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.1.0/mdb.umd.min.js"
 ></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+</body>
 </html>
