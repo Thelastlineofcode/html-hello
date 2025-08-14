@@ -1,5 +1,8 @@
 {
   "default-index": {
     "us": "default-index"
+  },
+  "mdb5-free-standard": {
+    "us": "mdb5-free-standard"
   }
 }

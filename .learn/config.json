@@ -57,62 +57,65 @@
     "exercises": [
         {
             "position": 0,
-            "path": "./",
-            "slug": "default-index",
+            "path": "mdb5-free-standard",
+            "slug": "mdb5-free-standard",
             "translations": {
-                "cn": "README.cn.md",
-                "es": "README.es.md",
-                "us": "README.md"
+                "us": "README.txt"
             },
             "language": "html",
-            "entry": "index.html",
-            "title": "default-index",
+            "entry": "mdb5-free-standard/index.html",
+            "title": "mdb5-free-standard",
             "graded": false,
             "files": [
                 {
-                    "path": ".//.git",
-                    "name": ".git",
+                    "path": "mdb5-free-standard/.mdb",
+                    "name": ".mdb",
                     "hidden": true
                 },
                 {
-                    "path": ".//.learn",
-                    "name": ".learn",
+                    "path": "mdb5-free-standard/Jenkinsfile",
+                    "name": "Jenkinsfile",
                     "hidden": true
                 },
                 {
-                    "path": ".//.vscode",
-                    "name": ".vscode",
+                    "path": "mdb5-free-standard/License.txt",
+                    "name": "License.txt",
+                    "hidden": false
+                },
+                {
+                    "path": "mdb5-free-standard/README.txt",
+                    "name": "README.txt",
                     "hidden": true
                 },
                 {
-                    "path": ".//README.cn.md",
-                    "name": "README.cn.md",
+                    "path": "mdb5-free-standard/css",
+                    "name": "css",
                     "hidden": true
                 },
                 {
-                    "path": ".//README.es.md",
-                    "name": "README.es.md",
+                    "path": "mdb5-free-standard/img",
+                    "name": "img",
                     "hidden": true
                 },
                 {
-                    "path": ".//README.md",
-                    "name": "README.md",
-                    "hidden": true
-                },
-                {
-                    "path": ".//index.html",
+                    "path": "mdb5-free-standard/index.html",
                     "name": "index.html",
                     "hidden": false
                 },
                 {
-                    "path": ".//learn.json",
-                    "name": "learn.json",
+                    "path": "mdb5-free-standard/js",
+                    "name": "js",
                     "hidden": true
                 },
                 {
-                    "path": ".//server.py",
-                    "name": "server.py",
-                    "hidden": false
+                    "path": "mdb5-free-standard/package.json",
+                    "name": "package.json",
+                    "hidden": true
+                },
+                {
+                    "path": "mdb5-free-standard/src",
+                    "name": "src",
+                    "hidden": true
                 }
             ],
             "done": false
@@ -121,5 +124,5 @@
     "bugsLink": null,
     "videoSolutions": false,
     "localhostOnly": false,
-    "session": 3602305435326736000
+    "session": 8678422683871350000
 }
