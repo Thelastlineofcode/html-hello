@@ -53,69 +53,71 @@
         "translations": []
     },
     "address": "http://localhost:3000",
-    "currentExercise": null,
+    "currentExercise": "default-index",
     "exercises": [
         {
             "position": 0,
-            "path": "mdb5-free-standard",
-            "slug": "mdb5-free-standard",
+            "path": "./",
+            "slug": "default-index",
             "translations": {
-                "us": "README.txt"
+                "cn": "README.cn.md",
+                "es": "README.es.md",
+                "us": "README.md"
             },
-            "language": "html",
-            "entry": "mdb5-free-standard/index.html",
-            "title": "mdb5-free-standard",
+            "language": "python3",
+            "entry": null,
+            "title": "default-index",
             "graded": false,
             "files": [
                 {
-                    "path": "mdb5-free-standard/.mdb",
-                    "name": ".mdb",
+                    "path": ".//.DS_Store",
+                    "name": ".DS_Store",
                     "hidden": true
                 },
                 {
-                    "path": "mdb5-free-standard/Jenkinsfile",
-                    "name": "Jenkinsfile",
+                    "path": ".//.git",
+                    "name": ".git",
                     "hidden": true
                 },
                 {
-                    "path": "mdb5-free-standard/License.txt",
-                    "name": "License.txt",
-                    "hidden": false
-                },
-                {
-                    "path": "mdb5-free-standard/README.txt",
-                    "name": "README.txt",
+                    "path": ".//.learn",
+                    "name": ".learn",
                     "hidden": true
                 },
                 {
-                    "path": "mdb5-free-standard/css",
-                    "name": "css",
+                    "path": ".//.vscode",
+                    "name": ".vscode",
                     "hidden": true
                 },
                 {
-                    "path": "mdb5-free-standard/img",
-                    "name": "img",
+                    "path": ".//README.cn.md",
+                    "name": "README.cn.md",
                     "hidden": true
                 },
                 {
-                    "path": "mdb5-free-standard/index.html",
+                    "path": ".//README.es.md",
+                    "name": "README.es.md",
+                    "hidden": true
+                },
+                {
+                    "path": ".//README.md",
+                    "name": "README.md",
+                    "hidden": true
+                },
+                {
+                    "path": ".//index.html",
                     "name": "index.html",
                     "hidden": false
                 },
                 {
-                    "path": "mdb5-free-standard/js",
-                    "name": "js",
+                    "path": ".//learn.json",
+                    "name": "learn.json",
                     "hidden": true
                 },
                 {
-                    "path": "mdb5-free-standard/package.json",
-                    "name": "package.json",
-                    "hidden": true
-                },
-                {
-                    "path": "mdb5-free-standard/src",
-                    "name": "src",
-                    "hidden": true
+                    "path": ".//server.py",
+                    "name": "server.py",
+                    "hidden": false
                 }
             ],
             "done": false
@@ -124,5 +126,5 @@
     "bugsLink": null,
     "videoSolutions": false,
     "localhostOnly": false,
-    "session": 8678422683871350000
+    "session": 8748562689647501000
 }
